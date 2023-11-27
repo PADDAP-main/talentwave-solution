@@ -161,7 +161,7 @@ html.wp-toolbar {
     padding-top: 28px;
 }
 
-.sub-content-block.inactive {
+.inactive {
     opacity: .5;
     pointer-events: none;
 }

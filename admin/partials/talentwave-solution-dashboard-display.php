@@ -35,8 +35,7 @@ $userId  = get_current_user_id();
         </div>
         <div class="bg-white content-block">
             <img src="<?= $imageBasePath . '/pencil.svg'; ?>" alt="Pencil"/>
-            <a href="mailto:contact@paddap.nl?subject=Talentwave Soluction meer informatie"
-               class="primary-button top-right">Meer informatie</a>
+            <span class="primary-button top-right send-mail-bttn" data-type="Meer informatie over Talentwave Solution">Meer informatie</span>
         </div>
     </div>
 </section>
