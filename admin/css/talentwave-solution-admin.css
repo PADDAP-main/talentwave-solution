@@ -1,0 +1,35 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+:root {
+    --primary-color: #00635A;
+    --secondary-color: #E5EFEE;
+    --paddap-orange: #FE970C;
+}
+
+#adminmenu, #adminmenuback, #adminmenuwrap, #wpadminbar {
+    background-color: var(--primary-color);
+}
+
+#adminmenu .wp-submenu a:focus, #adminmenu .wp-submenu a:hover, #adminmenu a:hover, #adminmenu li.menu-top > a:focus, #adminmenu li a:focus div.wp-menu-image:before, #adminmenu li.opensub div.wp-menu-image:before, #adminmenu li:hover div.wp-menu-image:before {
+    color: white !important;
+}
+
+#adminmenu li.menu-top:hover, #adminmenu li.opensub > a.menu-top, #adminmenu li > a.menu-top:focus, #adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head, #adminmenu .wp-menu-arrow, #adminmenu .wp-menu-arrow div, #adminmenu li.current a.menu-top, #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu, #adminmenu a:hover, #adminmenu li.menu-top:hover, #adminmenu li.opensub > a.menu-top, #adminmenu li > a.menu-top:focus {
+    color: white;
+    background-color: var(--paddap-orange);
+}
+
+#adminmenu .wp-submenu {
+    background-color: #2c3338;
+}
+
+body {
+    background-color: var(--secondary-color);
+}
+
+div#wpfooter {
+    display: none;
+}
