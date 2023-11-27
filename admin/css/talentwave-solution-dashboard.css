@@ -54,6 +54,7 @@ h3 .is-image {
     text-decoration: none;
     transition: .2s ease;
     border: 2px solid;
+    cursor: pointer;
 }
 
 .top-right {
@@ -158,6 +159,11 @@ div#wpbody {
 
 html.wp-toolbar {
     padding-top: 28px;
+}
+
+.sub-content-block.inactive {
+    opacity: .5;
+    pointer-events: none;
 }
 
 @media screen and (max-width: 920px) {

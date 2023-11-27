@@ -10,6 +10,13 @@ class Talenwave_Solution_Dashboard {
 		if ( is_admin() ) {
 			add_action( 'init', array( $this, 'init' ) );
 		}
+
+		add_action( 'rest_api_init', function () {
+			register_rest_route( 'talentwave', '/get-information', array(
+				'methods'  => 'POST',
+				'callback' => [ $this, 'send_information_mail' ],
+			) );
+		} );
 	}
 
 	public function init() {
@@ -93,6 +100,29 @@ class Talenwave_Solution_Dashboard {
 			wp_safe_redirect( admin_url( 'admin.php?page=talentwave-dashboard' ) );
 			exit;
 		}
+	}
+
+	public function send_information_mail() {
+		if ( htmlspecialchars( $_POST['key'] ) !== 'wNzBnWtkGF' ) {
+			return new WP_REST_Response( array( 'error' => 'You are not allowed to do this action.' ), 401 );
+		}
+
+		$subject       = isset( $_POST['type'] ) ? $_POST['type'] : 'Meer informatie';
+		$currentUserId = isset( $_POST['userId'] ) ? intval( $_POST['userId'] ) : false;
+
+		if ( ! $currentUserId ) {
+			return new WP_REST_Response( array( 'error' => 'You are not allowed to do this action.' ), 401 );
+		}
+
+		$userData = get_userdata( $currentUserId );
+
+		if ( empty( $userData ) ) {
+			return new WP_REST_Response( array( 'error' => 'You are not allowed to do this action.' ), 401 );
+		}
+
+		wp_mail( 'contact@paddap.nl', $subject, 'Er is meer informatie aangevraagd door: ' . $userData->user_email, [ 'Reply-To: ' . $userData->user_email ] );
+
+		return new WP_REST_Response( array( 'error' => 'Email has been sent.' ), 201 );
 	}
 
 }
