@@ -12,7 +12,10 @@ class Talentwave_Solution_Updater {
 			'talentwave-solution'
 		);
 
-		$myUpdateChecker->setBranch( 'master' );
+		$myUpdateChecker->getVcsApi()->enableReleaseAssets();
+
+		$myUpdateChecker->setBranch( 'main' );
+
 	}
 
 }
