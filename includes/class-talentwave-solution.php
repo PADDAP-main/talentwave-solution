@@ -124,6 +124,7 @@ class Talentwave_Solution {
 
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-talentwave-solution-updater.php';
 
+		(new Talentwave_Solution_Updater())->get_update();
 		$this->loader = new Talentwave_Solution_Loader();
 		$this->load_dashboard();
 
