@@ -7,6 +7,18 @@
     --primary-color: #00635A;
     --secondary-color: #E5EFEE;
     --paddap-orange: #FE970C;
+	--tertiary-color: #f9f9f9;
+}
+
+#wpcontent {
+	background-color: var(--tertiary-color);
+}
+.wp-menu-name::after {
+	border-right-color: var(--tertiary-color);
+}
+
+ul#adminmenu a.wp-has-current-submenu:after, ul#adminmenu>li.current>a.current:after  {
+	border-right-color: var(--tertiary-color);
 }
 
 #adminmenu, #adminmenuback, #adminmenuwrap, #wpadminbar {
