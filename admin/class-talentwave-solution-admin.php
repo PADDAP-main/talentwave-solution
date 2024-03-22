@@ -52,6 +52,8 @@ class Talentwave_Solution_Admin {
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
 
+		add_action( 'admin_menu', [ $this, 'add_plugin_admin_menu' ], 9 );
+
 	}
 
 	/**
@@ -97,6 +99,16 @@ class Talentwave_Solution_Admin {
 
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/talentwave-solution-admin.js', array( 'jquery' ), $this->version, false );
 
+	}
+
+	public function add_plugin_admin_menu() {
+		add_menu_page( $this->plugin_name, 'AI generator', 'administrator', $this->plugin_name,
+			array( $this, 'display_plugin_admin_dashboard' ), 'dashicons-superhero-alt', 26 );
+	}
+	
+	public function display_plugin_admin_dashboard() {
+		// Creating an instance
+		echo '<script>window.location = "'. get_permalink(520) .'"</script>';
 	}
 
 }
