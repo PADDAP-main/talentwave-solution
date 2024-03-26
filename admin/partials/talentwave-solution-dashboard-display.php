@@ -132,10 +132,6 @@ foreach ( $results as $result ) {
                     <h3><span>📸</span>Foto’s/video’s laten maken</h3>
                     <p>Laat professionele recruitment foto’s of video’s maken.</p>
                 </a>
-                <a href="#" class="sub-content-block" data-type="Meer informatie AI content generation">
-                    <h3><span>🤖</span>AI content generation</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </a>
             </div>
         </div>
         <div class="bg-white content-block">

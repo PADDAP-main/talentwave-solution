@@ -16,7 +16,7 @@
  * Plugin Name:       Talentwave Solution
  * Plugin URI:        https://paddap.nl/talentwave-solution
  * Description:        All-in-one oplossing voor jouw recruitment bureau. Wij bieden een uniek podium met slimme tools om jouw business te laten groeien.
- * Version:           1.0.11
+ * Version:           1.0.11.1
  * Author:            PADDAP
  * Author URI:        https://paddap.nl/
  * License:           GPL-2.0+
